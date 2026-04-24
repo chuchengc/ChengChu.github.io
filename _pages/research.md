@@ -22,7 +22,7 @@ author_profile: true
   background: transparent;
   color: inherit;
 
-  border: 1px solid rgba(128, 128, 128, 0.28);
+  border: 3px solid rgba(128, 128, 128, 0.28);
   border-radius: 16px;
   padding: 1.5rem 1.7rem;
 
