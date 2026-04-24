@@ -22,18 +22,21 @@ author_profile: true
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  background: #1f2529;
-  border-radius: 8px;
+
+  background: var(--global-bg-color, #ffffff);
+  color: var(--global-text-color, #222222);
+
+  border-radius: 10px;
   padding: 1.4rem 1.6rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
 }
 
 .research-card img {
   width: 220px;
   height: 150px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
   flex-shrink: 0;
 }
 
@@ -45,12 +48,51 @@ author_profile: true
   margin-top: 0;
   margin-bottom: 0.7rem;
   font-size: 1.25rem;
-  color: #ffffff;
+  color: inherit;
 }
 
 .research-text p {
   margin-bottom: 0;
   line-height: 1.6;
+  color: inherit;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .research-card,
+body.dark .research-card,
+.dark .research-card {
+  background: #1f2529;
+  color: #f2f2f2;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.30);
+}
+
+/* Light mode */
+html[data-theme="light"] .research-card,
+body.light .research-card,
+.light .research-card {
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  .research-card {
+    background: #1f2529;
+    color: #f2f2f2;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.30);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .research-card {
+    background: #ffffff;
+    color: #333333;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
 }
 
 @media (max-width: 768px) {
@@ -62,18 +104,6 @@ author_profile: true
   .research-card img {
     width: 100%;
     height: auto;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .research-card {
-    background: #f7f7f7;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
-
-  .research-text h2 {
-    color: #222222;
   }
 }
 </style>
