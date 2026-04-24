@@ -6,32 +6,6 @@ author_profile: true
 ---
 
 <style>
-:root {
-  --research-card-bg: rgba(255, 255, 255, 0.55);
-  --research-card-text: #333333;
-  --research-card-border: rgba(0, 0, 0, 0.10);
-  --research-card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-html[data-theme="dark"],
-body.dark,
-body.dark-mode,
-.dark {
-  --research-card-bg: rgba(31, 37, 41, 0.55);
-  --research-card-text: #f2f2f2;
-  --research-card-border: rgba(255, 255, 255, 0.14);
-  --research-card-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --research-card-bg: rgba(31, 37, 41, 0.55);
-    --research-card-text: #f2f2f2;
-    --research-card-border: rgba(255, 255, 255, 0.14);
-    --research-card-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  }
-}
-
 .research-intro {
   margin-bottom: 2rem;
   line-height: 1.6;
@@ -45,29 +19,27 @@ body.dark-mode,
 }
 
 .research-card {
-  background: var(--research-card-bg);
-  color: var(--research-card-text);
+  background: transparent;
+  color: inherit;
 
-  border: 1px solid var(--research-card-border);
+  border: 1px solid rgba(128, 128, 128, 0.28);
   border-radius: 16px;
   padding: 1.5rem 1.7rem;
 
-  box-shadow: var(--research-card-shadow);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .research-card h2 {
   margin-top: 0;
   margin-bottom: 0.8rem;
   font-size: 1.25rem;
-  color: var(--research-card-text);
+  color: inherit;
 }
 
 .research-card p {
   margin-bottom: 0;
   line-height: 1.65;
-  color: var(--research-card-text);
+  color: inherit;
 }
 </style>
 
