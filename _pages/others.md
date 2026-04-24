@@ -27,3 +27,8 @@ Conference Reviewer:
 Journal Reviewer:
 
 - Quantum Information Processing
+- Advanced Quantum Technologies
+
+MISC:
+
+- 2023 Fall: Luddy Undergraduate Poster Judge
