@@ -6,6 +6,37 @@ author_profile: true
 ---
 
 <style>
+:root {
+  --research-card-bg: #ffffff;
+  --research-card-text: #333333;
+  --research-card-border: #e5e5e5;
+  --research-card-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --research-image-bg: #f2f2f2;
+}
+
+/* 如果网站切到 dark mode，就自动改变量 */
+html[data-theme="dark"],
+body.dark,
+body.dark-mode,
+.dark {
+  --research-card-bg: #1f2529;
+  --research-card-text: #f2f2f2;
+  --research-card-border: rgba(255, 255, 255, 0.10);
+  --research-card-shadow: 0 4px 14px rgba(0, 0, 0, 0.30);
+  --research-image-bg: #2b3136;
+}
+
+/* 如果站点没有显式主题标记，就跟随系统主题 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --research-card-bg: #1f2529;
+    --research-card-text: #f2f2f2;
+    --research-card-border: rgba(255, 255, 255, 0.10);
+    --research-card-shadow: 0 4px 14px rgba(0, 0, 0, 0.30);
+    --research-image-bg: #2b3136;
+  }
+}
+
 .research-intro {
   margin-bottom: 2rem;
   line-height: 1.6;
@@ -23,13 +54,13 @@ author_profile: true
   align-items: center;
   gap: 1.5rem;
 
-  background: #ffffff;
-  color: #333333;
+  background: var(--research-card-bg);
+  color: var(--research-card-text);
 
   border-radius: 12px;
   padding: 1.4rem 1.6rem;
-  border: 1px solid #e5e5e5;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--research-card-border);
+  box-shadow: var(--research-card-shadow);
 }
 
 .research-card img {
@@ -38,7 +69,7 @@ author_profile: true
   object-fit: cover;
   border-radius: 10px;
   flex-shrink: 0;
-  background: #f2f2f2;
+  background: var(--research-image-bg);
 }
 
 .research-text {
@@ -49,13 +80,13 @@ author_profile: true
   margin-top: 0;
   margin-bottom: 0.7rem;
   font-size: 1.25rem;
-  color: #333333;
+  color: var(--research-card-text);
 }
 
 .research-text p {
   margin-bottom: 0;
   line-height: 1.6;
-  color: #444444;
+  color: var(--research-card-text);
 }
 
 @media (max-width: 768px) {
